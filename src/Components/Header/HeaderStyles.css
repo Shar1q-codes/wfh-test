@@ -1,0 +1,114 @@
+.header-container{
+    
+    background-color: white;
+  }
+  
+  .header-container header{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    height: 30px;
+    padding-left: 10px;
+  }
+  
+  .logo-name{
+    line-height: 1px;
+    padding-left: 10px;
+  }
+  
+  #navigations a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+  }
+
+  #navigations a:hover,
+  #navigations a.active{
+    color: orangered;
+  }
+
+  #navigations a.active::after,
+  #navigations a:hover::after{
+    content: "";
+    color: orangered;
+  }
+  
+  #navigations{
+    
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .bars{
+    display: none;
+  }
+
+  /* Responsive */
+
+  @media only screen and (min-width: 545px) and (max-width: 640px){
+
+    #navigations{
+      position: fixed;
+      width: 300px;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: start;
+      bottom: 0;
+      right: -300px;
+      background-color: aqua;
+      height: 87%;
+      transition: 0.3s ease-in-out;
+      z-index: 999;
+    }
+    
+
+    #navigations.active{
+      right: 0;
+    }
+
+    #navigations a{
+      padding: 20px;
+    }
+
+    .bars{
+      display: block;
+      font-size: 30px;
+      padding-right: 30px;
+      padding-top: 10px;
+    }
+  }
+
+  @media only screen and  (max-width: 480px){
+
+    #navigations{
+        position: fixed;
+        width: 300px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        bottom: 0;
+        right: -300px;
+        background-color: aqua;
+        height: 87%;
+        transition: 0.3s ease-in-out;
+      }
+
+      #navigations.active{
+        right: 0;
+      }
+
+      #navigations a{
+        padding: 20px;
+      }
+
+      .bars{
+        display: block;
+        font-size: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+      }
+}
